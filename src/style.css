@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gabarito', sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    align-items: center;
+    gap: 10px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.nav__sec1 {
+    display: flex;
+    align-items: center;
+}
+
+.nav__sec1__title {
+    color: rgb(219, 37, 247);
+    font-size: 30px;
+}
+
+.nav__sec2 {
+    padding: 10px;
+    width:700px;
+    border: 1px solid black;
+    border-radius: 30px;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.nav__sec2 input {
+    border: none;
+    outline: none;
+    padding-left: 10px;
+}
+
+.nav__sec3 {
+    display: flex;
+    margin-right: 10px;
+    align-items: center;
+    gap: 10px;
+}
+.bars{
+    display: none;
+}
+.mylearning {
+    cursor: pointer;
+    position: relative;
+}
+
+.mylearning__popup {
+    position: absolute;
+    border: 1px solid black;
+    width: 150px;
+    padding: 20px;
+    top: 150%;
+    right: 0;
+    background-color: white;
+    display: none;
+}
+
+.mylearning:hover .mylearning__popup {
+    display: block;
+}
+
+.categories {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid black;
+
+    justify-content: space-around;
+}
+
+.categories p {
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(219, 37, 247);
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 1px solid rgb(219, 37, 247);
+}
+
+.categories p:hover {
+    background-color: white;
+    border: 1px solid rgb(219, 37, 247);
+    color: rgb(219, 37, 247);
+}
+
+.sale-img {
+    width: 100%;
+    position: relative;
+}
+
+.sale-img img {
+    width: 100%;
+}
+
+.sale-img__offer {
+    border: 1px solid black;
+    background-color: white;
+    position: absolute;
+    width: 35%;
+    padding: 2%;
+    top: 20%;
+    left: 8%;
+    opacity: 0;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoom {
+    10% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.recommended {
+    padding: 10px;
+    text-transform: capitalize;
+    margin-left: 30px;
+}
+
+.recommended__title h2{
+    font-size: 28px;
+    
+}
+.recommended__title + p{
+    font-size: 22px;
+    text-transform: capitalize;
+}
+.recommended p {
+    margin-top: 10px;
+}
+
+.recommended__container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+}
+
+.course-card {
+    width: 280px;
+    height: 280px;
+    margin: 15px;
+}
+
+.course-card img {
+    width: 100%;
+    height: 50%;
+}
+
+.topic {
+    text-transform: capitalize;
+}
+
+.topic h2 {
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.topic ul {
+    gap: 20px;
+}
+
+.topic ul li {
+    display: inline-block;
+    border: 1px solid black;
+    width: 25%;
+    margin: 20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 50px;
+}
+
+.popular {
+    padding: 10px;
+    margin-left: 30px;
+}
+
+.popular__title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.popular__subtitle {
+    margin-top: 15px;
+    font-size: 22px;
+    text-transform: capitalize;
+}
+
+.popular__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer__1 {
+    display: flex;
+    gap: 20px;
+    padding: 30px;
+    margin: 20px;
+    text-transform: capitalize;
+}
+
+.footer__2 {
+    padding: 30px;
+    margin: 20px;
+}
+.footer__2__s2{
+    display: flex;
+    justify-content: space-between;
+}
+@media (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+
+    .course-card {
+        width: 200px;
+        height: 240px;
+    }
+
+}
+
+@media (max-width:600px) {
+    .categories {
+        display: none;
+    }
+    .course-card {
+        width: 160px;
+        height: 240px;
+    }
+
+
+    .topic ul li {
+        width: 150px;
+        padding: 10px;
+    }
+    .nav__sec2,.nav__sec3{
+        display: none;
+    }
+    .bars{
+        display: block;
+        font-size: 18px;
+    }
+}
